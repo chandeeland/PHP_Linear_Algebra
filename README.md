@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.org/google/google-api-php-client.svg)](https://travis-ci.org/google/google-api-php-client)
-
-# Google APIs Client Library for PHP #
+# PHP Linear Algebra Matrix Math Library #
 
 ## Description ##
 This library Aims to provide Basic Matrix representations suitable for Linear Algebra calculation in PHP
@@ -12,6 +10,7 @@ This library Aims to provide Basic Matrix representations suitable for Linear Al
 * Matrix Transposition              [done]
 * Matrix Decomposition
 * Matrix Inversion
+* Matrix Sparsity/Density Calculation [done]
 
 
 ## Beta ##
