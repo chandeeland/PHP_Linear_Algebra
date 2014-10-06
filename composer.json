@@ -1,8 +1,8 @@
 {
     "name":        "php_linear_algebra",
     "description": "basic matrix math lib for PHP",
-    "homepage":    "",
-    "license":     "GPL v3",
+    "homepage":    "https://github.com/chandeeland/PHP_Linear_Algebra",
+    "license":     "Apache 2.0",
     "keywords":    ["php","linear algrebra","matrix","math"],
     "require": {
         "php": ">=5.3.3"
