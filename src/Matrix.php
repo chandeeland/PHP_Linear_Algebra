@@ -85,17 +85,17 @@ class Matrix implements \ArrayAccess
 
         if(!($rows = count($data)))
         {
-            throw new Exception('zero row matrix?');
+            throw new \Exception('zero row matrix?');
         }
         
         if (!($columns = count(current($data))))
         {
-            throw new Exception('zero column matrix?');
+            throw new \Exception('zero column matrix?');
         }
 
         if (array_map('count', $data) !== array_fill(0, $rows, $columns))
         {
-            throw new Exception('matrix columns are inconsistent');
+            throw new \Exception('matrix columns are inconsistent');
         }
         
         if ($columns == 1)
@@ -126,7 +126,7 @@ class Matrix implements \ArrayAccess
      */
     public function offsetSet($offset, $value)
     {
-        throw new Exception('You cant do that');
+        throw new \Exception('You cant do that');
     }
 
     /**
@@ -172,7 +172,7 @@ class Matrix implements \ArrayAccess
      */
     public function offsetUnset($offset)
     {
-        throw new Exception('You cant do that');        
+        throw new \Exception('You cant do that');        
     }
 
     /**
@@ -246,7 +246,7 @@ class Matrix implements \ArrayAccess
     {
         if ($a->getRows() != $b->getRows() || $a->getColumns() != $b->getColumns())
         {
-            throw new Exception('Incompatable matrix addition');
+            throw new \Exception('Incompatable matrix addition');
         }
     
         $c = array();
@@ -288,7 +288,11 @@ class Matrix implements \ArrayAccess
         {
             if ($a->getColumns() != $b->getRows())
             {
-                throw new Exception('incompatable multiplicands');
+                throw new \Exception(sprintf('incompatable multiplicands, expects nxm * mxp = nxp, but got %dx%d * %dx%d where %d != %d'
+                        ,$a->getRows(), $a->getColumns()
+                        ,$b->getRows(), $b->getColumns()
+                        ,$a->getColumns(), $b->getRows()
+                    ));
             }
 
             $ab = array();
