@@ -1,0 +1,15 @@
+{
+    "name":        "php_linear_algebra",
+    "description": "basic matrix math lib for PHP",
+    "homepage":    "",
+    "license":     "GPL v3",
+    "keywords":    ["php","linear algrebra","matrix","math"],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+}
